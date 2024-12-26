@@ -1,12 +1,12 @@
 import * as React from "react";
-interface SvgProps extends React.SVGProps<SVGSVGElement> {}
-
-const SimpleStorageServiceDirectoryBucket: React.FC<SvgProps> = (props) => (
+import type { SVGProps } from "react";
+const SvgSimpleStorageServiceDirectoryBucket = (
+  props: SVGProps<SVGSVGElement>
+) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width={48}
-    height={48}
     fill="none"
+    viewBox="0 0 48 48"
     {...props}
   >
     <path
@@ -15,4 +15,4 @@ const SimpleStorageServiceDirectoryBucket: React.FC<SvgProps> = (props) => (
     />
   </svg>
 );
-export default SimpleStorageServiceDirectoryBucket;
+export default SvgSimpleStorageServiceDirectoryBucket;

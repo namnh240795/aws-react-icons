@@ -1,8 +1,7 @@
 import * as React from "react";
-interface SvgProps extends React.SVGProps<SVGSVGElement> {}
-
-const SecurityLake: React.FC<SvgProps> = (props) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width={40} height={40} {...props}>
+import type { SVGProps } from "react";
+const SvgSecurityLake = (props: SVGProps<SVGSVGElement>) => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" {...props}>
     <g fill="none" fillRule="evenodd">
       <path fill="#DD344C" d="M0 0h40v40H0z" />
       <path
@@ -12,4 +11,4 @@ const SecurityLake: React.FC<SvgProps> = (props) => (
     </g>
   </svg>
 );
-export default SecurityLake;
+export default SvgSecurityLake;

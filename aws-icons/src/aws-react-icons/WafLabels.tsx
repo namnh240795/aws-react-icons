@@ -1,8 +1,7 @@
 import * as React from "react";
-interface SvgProps extends React.SVGProps<SVGSVGElement> {}
-
-const WafLabels: React.FC<SvgProps> = (props) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width={48} height={48} {...props}>
+import type { SVGProps } from "react";
+const SvgWafLabels = (props: SVGProps<SVGSVGElement>) => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" {...props}>
     <path
       fill="#DD344C"
       fillRule="evenodd"
@@ -10,4 +9,4 @@ const WafLabels: React.FC<SvgProps> = (props) => (
     />
   </svg>
 );
-export default WafLabels;
+export default SvgWafLabels;

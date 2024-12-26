@@ -1,8 +1,7 @@
 import * as React from "react";
-interface SvgProps extends React.SVGProps<SVGSVGElement> {}
-
-const TrustedAdvisor: React.FC<SvgProps> = (props) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width={64} height={64} {...props}>
+import type { SVGProps } from "react";
+const SvgTrustedAdvisor = (props: SVGProps<SVGSVGElement>) => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" {...props}>
     <g fill="none" fillRule="evenodd">
       <path fill="#E7157B" d="M0 0h64v64H0z" />
       <path
@@ -12,4 +11,4 @@ const TrustedAdvisor: React.FC<SvgProps> = (props) => (
     </g>
   </svg>
 );
-export default TrustedAdvisor;
+export default SvgTrustedAdvisor;

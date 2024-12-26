@@ -1,8 +1,9 @@
 import * as React from "react";
-interface SvgProps extends React.SVGProps<SVGSVGElement> {}
-
-const OpensearchServiceClusterAdministratorNode: React.FC<SvgProps> = (props) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width={48} height={48} {...props}>
+import type { SVGProps } from "react";
+const SvgOpensearchServiceClusterAdministratorNode = (
+  props: SVGProps<SVGSVGElement>
+) => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" {...props}>
     <path
       fill="#8C4FFF"
       fillRule="evenodd"
@@ -10,4 +11,4 @@ const OpensearchServiceClusterAdministratorNode: React.FC<SvgProps> = (props) =>
     />
   </svg>
 );
-export default OpensearchServiceClusterAdministratorNode;
+export default SvgOpensearchServiceClusterAdministratorNode;

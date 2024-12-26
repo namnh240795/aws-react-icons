@@ -1,8 +1,9 @@
 import * as React from "react";
-interface SvgProps extends React.SVGProps<SVGSVGElement> {}
-
-const SimpleStorageServiceS3ObjectLambdaAccessPoints: React.FC<SvgProps> = (props) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width={48} height={48} {...props}>
+import type { SVGProps } from "react";
+const SvgSimpleStorageServiceS3ObjectLambdaAccessPoints = (
+  props: SVGProps<SVGSVGElement>
+) => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" {...props}>
     <path
       fill="#7AA116"
       fillRule="evenodd"
@@ -10,4 +11,4 @@ const SimpleStorageServiceS3ObjectLambdaAccessPoints: React.FC<SvgProps> = (prop
     />
   </svg>
 );
-export default SimpleStorageServiceS3ObjectLambdaAccessPoints;
+export default SvgSimpleStorageServiceS3ObjectLambdaAccessPoints;

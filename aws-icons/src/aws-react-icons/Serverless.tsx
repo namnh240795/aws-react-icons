@@ -1,8 +1,7 @@
 import * as React from "react";
-interface SvgProps extends React.SVGProps<SVGSVGElement> {}
-
-const Serverless: React.FC<SvgProps> = (props) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width={48} height={48} {...props}>
+import type { SVGProps } from "react";
+const SvgServerless = (props: SVGProps<SVGSVGElement>) => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" {...props}>
     <g fill="none" fillRule="evenodd">
       <path stroke="#879196" strokeWidth={2} d="M1 1h46v46H1z" />
       <path fill="#8C4FFF" d="M4 4h40v40H4z" />
@@ -13,4 +12,4 @@ const Serverless: React.FC<SvgProps> = (props) => (
     </g>
   </svg>
 );
-export default Serverless;
+export default SvgServerless;

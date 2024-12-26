@@ -1,12 +1,10 @@
 import * as React from "react";
-interface SvgProps extends React.SVGProps<SVGSVGElement> {}
-
-const ApiGateway: React.FC<SvgProps> = (props) => (
+import type { SVGProps } from "react";
+const SvgApiGateway = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width={40}
-    height={40}
     fill="none"
+    viewBox="0 0 40 40"
     {...props}
   >
     <path fill="#8C4FFF" d="M0 0h40v40H0z" />
@@ -18,4 +16,4 @@ const ApiGateway: React.FC<SvgProps> = (props) => (
     />
   </svg>
 );
-export default ApiGateway;
+export default SvgApiGateway;

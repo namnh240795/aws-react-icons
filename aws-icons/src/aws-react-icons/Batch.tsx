@@ -1,8 +1,7 @@
 import * as React from "react";
-interface SvgProps extends React.SVGProps<SVGSVGElement> {}
-
-const Batch: React.FC<SvgProps> = (props) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width={40} height={40} {...props}>
+import type { SVGProps } from "react";
+const SvgBatch = (props: SVGProps<SVGSVGElement>) => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" {...props}>
     <g fill="none" fillRule="evenodd">
       <path fill="#ED7100" d="M0 0h40v40H0z" />
       <path
@@ -12,4 +11,4 @@ const Batch: React.FC<SvgProps> = (props) => (
     </g>
   </svg>
 );
-export default Batch;
+export default SvgBatch;

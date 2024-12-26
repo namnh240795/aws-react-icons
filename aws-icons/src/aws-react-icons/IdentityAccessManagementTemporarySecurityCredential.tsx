@@ -1,8 +1,9 @@
 import * as React from "react";
-interface SvgProps extends React.SVGProps<SVGSVGElement> {}
-
-const IdentityAccessManagementTemporarySecurityCredential: React.FC<SvgProps> = (props) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width={48} height={48} {...props}>
+import type { SVGProps } from "react";
+const SvgIdentityAccessManagementTemporarySecurityCredential = (
+  props: SVGProps<SVGSVGElement>
+) => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" {...props}>
     <path
       fill="#DD344C"
       fillRule="evenodd"
@@ -10,4 +11,4 @@ const IdentityAccessManagementTemporarySecurityCredential: React.FC<SvgProps> = 
     />
   </svg>
 );
-export default IdentityAccessManagementTemporarySecurityCredential;
+export default SvgIdentityAccessManagementTemporarySecurityCredential;
