@@ -49,13 +49,24 @@ exec(
           let componentName = path
             .basename(newFileName, ".tsx")
             .replace(/32|48/g, "");
+          const size = file.includes("48") ? 48 : 32;
+
+          // Get the original SVG file content
+          const originalSvgPath = path.join(
+            directory,
+            file.replace(".js", ".svg")
+          );
+          const originalSvgContent = fs.readFileSync(originalSvgPath, "utf8");
+          const root = parse(originalSvgContent);
+          const svgElement = root.querySelector("svg");
+          const viewBox = svgElement.getAttribute("viewBox");
 
           const tsContent = jsContent
             .replace(
               /const (\w+)/,
               `interface SvgProps extends React.SVGProps<SVGSVGElement> {}\n\nconst ${componentName}`
             )
-            .replace(" = (props) => (", ": React.FC<SvgProps> = (props) => (")
+            .replace(" = (props) => (", `: React.FC<SvgProps> = (props) => (`)
             .replace(
               /export default (\w+);/,
               `export default ${componentName};`
@@ -66,10 +77,11 @@ exec(
           console.log(
             `Converted ${filePath} to TypeScript and renamed to ${newFilePath}`
           );
-
-          exports.push(
-            `export { default as ${componentName} } from './${componentName}';`
-          );
+          if (componentName !== "index") {
+            exports.push(
+              `export { default as ${componentName} } from './${componentName}';`
+            );
+          }
         }
       });
 
@@ -78,13 +90,12 @@ exec(
       fs.writeFileSync(indexPath, exports.join("\n"));
       console.log(`Generated index.ts with exports for all icons`);
 
-      // Modify each .tsx file to remove 32, 48, Arch, and Res from export default
+      // Modify each .tsx file to remove Arch and Res from export default
       files.forEach((file) => {
         const filePath = path.join(outputDirectory, file);
         if (path.extname(file) === ".tsx") {
           let content = fs.readFileSync(filePath, "utf8");
           let componentName = path.basename(file, ".tsx").replace(/32|48/g, "");
-          componentName = componentName.replace(/^Arch|^Res/, "");
           content = content.replace(
             /export default (\w+);/,
             `export default ${componentName};`
@@ -93,12 +104,29 @@ exec(
           console.log(`Modified export default in ${filePath}`);
 
           // Rename the file to remove Arch and Res
-          const newFileName = file.replace(/^Arch|^Res/g, "");
           const newFilePath = path.join(outputDirectory, newFileName);
           fs.renameSync(filePath, newFilePath);
           console.log(`Renamed file to ${newFilePath}`);
         }
       });
+
+      // Remove index.tsx file if it exists
+      const indexTsxPath = path.join(outputDirectory, "index.tsx");
+      if (fs.existsSync(indexTsxPath)) {
+        fs.unlinkSync(indexTsxPath);
+        console.log(`Removed file: ${indexTsxPath}`);
+      }
+
+      // Remove the line 'export { default as index } from "./index";' from index.ts
+      let indexContent = fs.readFileSync(indexPath, "utf8");
+      indexContent = indexContent.replace(
+        /export { default as index } from ".\/index";\n/,
+        ""
+      );
+      fs.writeFileSync(indexPath, indexContent);
+      console.log(
+        `Removed 'export { default as index } from "./index";' from index.ts`
+      );
     });
   }
 );

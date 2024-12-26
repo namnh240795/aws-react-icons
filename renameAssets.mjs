@@ -15,7 +15,10 @@ fs.readdir(directory, (err, files) => {
 
   files.forEach((file) => {
     const filePath = path.join(directory, file);
-    const newFileName = file.replace(/^arch-|^res-/i, "");
+    const newFileName = file.replace(
+      /^arch-|^res-|^amazon-|^category-|^aws-/i,
+      ""
+    );
     const newFilePath = path.join(directory, newFileName);
 
     fs.rename(filePath, newFilePath, (err) => {
