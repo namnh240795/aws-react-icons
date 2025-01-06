@@ -8,7 +8,7 @@ importers:
 
   .:
     dependencies:
-      '@nullodev/icons-aws':
+      icons-aws:
         specifier: file:../icons-aws
         version: file:../icons-aws(react@19.0.0)(typescript@5.7.2)
       react:
@@ -106,11 +106,6 @@ packages:
 
   '@module-federation/webpack-bundler-runtime@0.5.1':
     resolution: {integrity: sha512-mMhRFH0k2VjwHt3Jol9JkUsmI/4XlrAoBG3E0o7HoyoPYv1UFOWyqAflfANcUPgbYpvqmyLzDcO+3IT36LXnrA==}
-
-  '@nullodev/icons-aws@file:../icons-aws':
-    resolution: {directory: ../icons-aws, type: directory}
-    peerDependencies:
-      react: '*'
 
   '@rsbuild/core@1.1.12':
     resolution: {integrity: sha512-9f+E47fMf51Cg4W7CF2Q4f7BRSslVV/+TRvs5ScclYanqXEFtAGV9nuecJEL6Qc9jJV61lES0esPTFdPPnWPGw==}
@@ -243,6 +238,11 @@ packages:
   html-entities@2.5.2:
     resolution: {integrity: sha512-K//PSRMQk4FZ78Kyau+mZurHn3FH0Vwr+H36eE0rPbeYkRRi9YxceYPhuN60UwWorxyKHhqoAJl2OFKa4BVtaA==}
 
+  icons-aws@file:../icons-aws:
+    resolution: {directory: ../icons-aws, type: directory}
+    peerDependencies:
+      react: '*'
+
   magic-string@0.30.17:
     resolution: {integrity: sha512-sNPKHvyjVf7gyjwS4xGTaW/mCnF8wnjtifKBEhxfZ7E/S8tQ0rssrwGNn6q8JH/ohItJfSQp9mBtQYuTlH5QnA==}
 
@@ -351,14 +351,6 @@ snapshots:
     dependencies:
       '@module-federation/runtime': 0.5.1
       '@module-federation/sdk': 0.5.1
-
-  '@nullodev/icons-aws@file:../icons-aws(react@19.0.0)(typescript@5.7.2)':
-    dependencies:
-      '@rslib/core': 0.2.2(typescript@5.7.2)
-      react: 19.0.0
-    transitivePeerDependencies:
-      - '@microsoft/api-extractor'
-      - typescript
 
   '@rsbuild/core@1.1.12':
     dependencies:
@@ -472,6 +464,14 @@ snapshots:
       picomatch: 4.0.2
 
   html-entities@2.5.2: {}
+
+  icons-aws@file:../icons-aws(react@19.0.0)(typescript@5.7.2):
+    dependencies:
+      '@rslib/core': 0.2.2(typescript@5.7.2)
+      react: 19.0.0
+    transitivePeerDependencies:
+      - '@microsoft/api-extractor'
+      - typescript
 
   magic-string@0.30.17:
     dependencies:

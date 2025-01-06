@@ -1,6 +1,6 @@
 {
   "name": "aws-icons",
- "version": "1.0.0",
+  "version": "1.0.0",
   "scripts": {
     "build": "rsbuild build",
     "check": "biome check --write",
@@ -11,7 +11,7 @@
   "dependencies": {
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "@nullodev/icons-aws": "file:../icons-aws"
+    "icons-aws": "file:../icons-aws"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.3",
