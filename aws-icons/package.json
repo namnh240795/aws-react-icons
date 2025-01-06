@@ -11,7 +11,8 @@
   },
   "dependencies": {
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "@nullodev/icons-aws": "file:../icons-aws"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.3",

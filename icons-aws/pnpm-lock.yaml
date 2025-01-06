@@ -8,89 +8,24 @@ importers:
 
   .:
     dependencies:
-      '@nullodev/icons-aws':
-        specifier: file:../icons-aws
-        version: file:../icons-aws(react@19.0.0)(typescript@5.7.2)
+      '@rslib/core':
+        specifier: ^0.2.2
+        version: 0.2.2(typescript@5.7.2)
+    devDependencies:
+      '@rsbuild/plugin-react':
+        specifier: ^1.1.0
+        version: 1.1.0(@rsbuild/core@1.1.13)
+      '@types/react':
+        specifier: ^19.0.2
+        version: 19.0.2
       react:
         specifier: ^19.0.0
         version: 19.0.0
-      react-dom:
-        specifier: ^19.0.0
-        version: 19.0.0(react@19.0.0)
-    devDependencies:
-      '@biomejs/biome':
-        specifier: ^1.9.3
-        version: 1.9.4
-      '@rsbuild/core':
-        specifier: ^1.1.8
-        version: 1.1.12
-      '@rsbuild/plugin-react':
-        specifier: ^1.0.7
-        version: 1.1.0(@rsbuild/core@1.1.12)
-      '@types/react':
-        specifier: ^19.0.0
-        version: 19.0.2
-      '@types/react-dom':
-        specifier: ^19.0.0
-        version: 19.0.2(@types/react@19.0.2)
       typescript:
         specifier: ^5.7.2
         version: 5.7.2
 
 packages:
-
-  '@biomejs/biome@1.9.4':
-    resolution: {integrity: sha512-1rkd7G70+o9KkTn5KLmDYXihGoTaIGO9PIIN2ZB7UJxFrWw04CZHPYiMRjYsaDvVV7hP1dYNRLxSANLaBFGpog==}
-    engines: {node: '>=14.21.3'}
-    hasBin: true
-
-  '@biomejs/cli-darwin-arm64@1.9.4':
-    resolution: {integrity: sha512-bFBsPWrNvkdKrNCYeAp+xo2HecOGPAy9WyNyB/jKnnedgzl4W4Hb9ZMzYNbf8dMCGmUdSavlYHiR01QaYR58cw==}
-    engines: {node: '>=14.21.3'}
-    cpu: [arm64]
-    os: [darwin]
-
-  '@biomejs/cli-darwin-x64@1.9.4':
-    resolution: {integrity: sha512-ngYBh/+bEedqkSevPVhLP4QfVPCpb+4BBe2p7Xs32dBgs7rh9nY2AIYUL6BgLw1JVXV8GlpKmb/hNiuIxfPfZg==}
-    engines: {node: '>=14.21.3'}
-    cpu: [x64]
-    os: [darwin]
-
-  '@biomejs/cli-linux-arm64-musl@1.9.4':
-    resolution: {integrity: sha512-v665Ct9WCRjGa8+kTr0CzApU0+XXtRgwmzIf1SeKSGAv+2scAlW6JR5PMFo6FzqqZ64Po79cKODKf3/AAmECqA==}
-    engines: {node: '>=14.21.3'}
-    cpu: [arm64]
-    os: [linux]
-
-  '@biomejs/cli-linux-arm64@1.9.4':
-    resolution: {integrity: sha512-fJIW0+LYujdjUgJJuwesP4EjIBl/N/TcOX3IvIHJQNsAqvV2CHIogsmA94BPG6jZATS4Hi+xv4SkBBQSt1N4/g==}
-    engines: {node: '>=14.21.3'}
-    cpu: [arm64]
-    os: [linux]
-
-  '@biomejs/cli-linux-x64-musl@1.9.4':
-    resolution: {integrity: sha512-gEhi/jSBhZ2m6wjV530Yy8+fNqG8PAinM3oV7CyO+6c3CEh16Eizm21uHVsyVBEB6RIM8JHIl6AGYCv6Q6Q9Tg==}
-    engines: {node: '>=14.21.3'}
-    cpu: [x64]
-    os: [linux]
-
-  '@biomejs/cli-linux-x64@1.9.4':
-    resolution: {integrity: sha512-lRCJv/Vi3Vlwmbd6K+oQ0KhLHMAysN8lXoCI7XeHlxaajk06u7G+UsFSO01NAs5iYuWKmVZjmiOzJ0OJmGsMwg==}
-    engines: {node: '>=14.21.3'}
-    cpu: [x64]
-    os: [linux]
-
-  '@biomejs/cli-win32-arm64@1.9.4':
-    resolution: {integrity: sha512-tlbhLk+WXZmgwoIKwHIHEBZUwxml7bRJgk0X2sPyNR3S93cdRq6XulAZRQJ17FYGGzWne0fgrXBKpl7l4M87Hg==}
-    engines: {node: '>=14.21.3'}
-    cpu: [arm64]
-    os: [win32]
-
-  '@biomejs/cli-win32-x64@1.9.4':
-    resolution: {integrity: sha512-8Y5wMhVIPaWe6jw2H+KlEm4wP/f7EW3810ZLmDlrEEy5KvBsb9ECEfu/kMWD484ijfQ8+nIi0giMgu9g1UAuuA==}
-    engines: {node: '>=14.21.3'}
-    cpu: [x64]
-    os: [win32]
 
   '@jridgewell/sourcemap-codec@1.5.0':
     resolution: {integrity: sha512-gv3ZRaISU3fjPAgNsriBRqGWQL6quFx04YMPW/zD8XMLsU32mhCCbfbO6KZFLjvYpCZ8zyDEgqsgf+PwPaM7GQ==}
@@ -106,16 +41,6 @@ packages:
 
   '@module-federation/webpack-bundler-runtime@0.5.1':
     resolution: {integrity: sha512-mMhRFH0k2VjwHt3Jol9JkUsmI/4XlrAoBG3E0o7HoyoPYv1UFOWyqAflfANcUPgbYpvqmyLzDcO+3IT36LXnrA==}
-
-  '@nullodev/icons-aws@file:../icons-aws':
-    resolution: {directory: ../icons-aws, type: directory}
-    peerDependencies:
-      react: '*'
-
-  '@rsbuild/core@1.1.12':
-    resolution: {integrity: sha512-9f+E47fMf51Cg4W7CF2Q4f7BRSslVV/+TRvs5ScclYanqXEFtAGV9nuecJEL6Qc9jJV61lES0esPTFdPPnWPGw==}
-    engines: {node: '>=16.7.0'}
-    hasBin: true
 
   '@rsbuild/core@1.1.13':
     resolution: {integrity: sha512-XBL2hrin8731W6iTGGL+x3cv07n4vm2D7u6XHRwtQkRfySzAqGx7ThlQLdNX/dJwfsoQrYQuWl/qzaljjXtGtg==}
@@ -212,11 +137,6 @@ packages:
   '@swc/helpers@0.5.15':
     resolution: {integrity: sha512-JQ5TuMi45Owi4/BIMAJBoSQoOJu12oOk/gADqlcUL9JEdHB8vyjUSsxqeNXnmXHjYKMi2WcYtezGEEhqUI/E2g==}
 
-  '@types/react-dom@19.0.2':
-    resolution: {integrity: sha512-c1s+7TKFaDRRxr1TxccIX2u7sfCnc3RxkVyBIUA2lCpyqCF+QoAwQ/CBg7bsMdVwP120HEH143VQezKtef5nCg==}
-    peerDependencies:
-      '@types/react': ^19.0.0
-
   '@types/react@19.0.2':
     resolution: {integrity: sha512-USU8ZI/xyKJwFTpjSVIrSeHBVAGagkHQKPNbxeWwql/vDmnTIBgx+TJnhFnj1NXgz8XfprU0egV2dROLGpsBEg==}
 
@@ -253,11 +173,6 @@ packages:
     resolution: {integrity: sha512-M7BAV6Rlcy5u+m6oPhAPFgJTzAioX/6B0DxyvDlo9l8+T3nLKbrczg2WLUyzd45L8RqfUMyGPzekbMvX2Ldkwg==}
     engines: {node: '>=12'}
 
-  react-dom@19.0.0:
-    resolution: {integrity: sha512-4GV5sHFG0e/0AD4X+ySy6UJd3jVl1iNsNHdpad0qhABJ11twS3TTBnseqsKurKcsNqCEFeGL3uLpVChpIO3QfQ==}
-    peerDependencies:
-      react: ^19.0.0
-
   react-refresh@0.16.0:
     resolution: {integrity: sha512-FPvF2XxTSikpJxcr+bHut2H4gJ17+18Uy20D5/F+SKzFap62R3cM5wH6b8WN3LyGSYeQilLEcJcR1fjBSI2S1A==}
     engines: {node: '>=0.10.0'}
@@ -279,9 +194,6 @@ packages:
       typescript:
         optional: true
 
-  scheduler@0.25.0:
-    resolution: {integrity: sha512-xFVuu11jh+xcO7JOAGJNOXld8/TcEHK/4CituBUeUb5hqxJLj9YuemAEuvm9gQ/+pgXYfbQuqAkiYu+u7YEsNA==}
-
   stackframe@1.3.4:
     resolution: {integrity: sha512-oeVtt7eWQS+Na6F//S4kJ2K2VbRlS9D43mAlMyVpVWovy9o+jfgH8O9agzANzaiLjclA0oYzUXEM4PurhSUChw==}
 
@@ -298,41 +210,6 @@ packages:
     hasBin: true
 
 snapshots:
-
-  '@biomejs/biome@1.9.4':
-    optionalDependencies:
-      '@biomejs/cli-darwin-arm64': 1.9.4
-      '@biomejs/cli-darwin-x64': 1.9.4
-      '@biomejs/cli-linux-arm64': 1.9.4
-      '@biomejs/cli-linux-arm64-musl': 1.9.4
-      '@biomejs/cli-linux-x64': 1.9.4
-      '@biomejs/cli-linux-x64-musl': 1.9.4
-      '@biomejs/cli-win32-arm64': 1.9.4
-      '@biomejs/cli-win32-x64': 1.9.4
-
-  '@biomejs/cli-darwin-arm64@1.9.4':
-    optional: true
-
-  '@biomejs/cli-darwin-x64@1.9.4':
-    optional: true
-
-  '@biomejs/cli-linux-arm64-musl@1.9.4':
-    optional: true
-
-  '@biomejs/cli-linux-arm64@1.9.4':
-    optional: true
-
-  '@biomejs/cli-linux-x64-musl@1.9.4':
-    optional: true
-
-  '@biomejs/cli-linux-x64@1.9.4':
-    optional: true
-
-  '@biomejs/cli-win32-arm64@1.9.4':
-    optional: true
-
-  '@biomejs/cli-win32-x64@1.9.4':
-    optional: true
 
   '@jridgewell/sourcemap-codec@1.5.0': {}
 
@@ -352,21 +229,6 @@ snapshots:
       '@module-federation/runtime': 0.5.1
       '@module-federation/sdk': 0.5.1
 
-  '@nullodev/icons-aws@file:../icons-aws(react@19.0.0)(typescript@5.7.2)':
-    dependencies:
-      '@rslib/core': 0.2.2(typescript@5.7.2)
-      react: 19.0.0
-    transitivePeerDependencies:
-      - '@microsoft/api-extractor'
-      - typescript
-
-  '@rsbuild/core@1.1.12':
-    dependencies:
-      '@rspack/core': 1.1.8(@swc/helpers@0.5.15)
-      '@rspack/lite-tapable': 1.0.1
-      '@swc/helpers': 0.5.15
-      core-js: 3.39.0
-
   '@rsbuild/core@1.1.13':
     dependencies:
       '@rspack/core': 1.1.8(@swc/helpers@0.5.15)
@@ -374,9 +236,9 @@ snapshots:
       '@swc/helpers': 0.5.15
       core-js: 3.39.0
 
-  '@rsbuild/plugin-react@1.1.0(@rsbuild/core@1.1.12)':
+  '@rsbuild/plugin-react@1.1.0(@rsbuild/core@1.1.13)':
     dependencies:
-      '@rsbuild/core': 1.1.12
+      '@rsbuild/core': 1.1.13
       '@rspack/plugin-react-refresh': 1.0.1(react-refresh@0.16.0)
       react-refresh: 0.16.0
 
@@ -449,10 +311,6 @@ snapshots:
     dependencies:
       tslib: 2.8.1
 
-  '@types/react-dom@19.0.2(@types/react@19.0.2)':
-    dependencies:
-      '@types/react': 19.0.2
-
   '@types/react@19.0.2':
     dependencies:
       csstype: 3.1.3
@@ -481,11 +339,6 @@ snapshots:
 
   picomatch@4.0.2: {}
 
-  react-dom@19.0.0(react@19.0.0):
-    dependencies:
-      react: 19.0.0
-      scheduler: 0.25.0
-
   react-refresh@0.16.0: {}
 
   react@19.0.0: {}
@@ -498,8 +351,6 @@ snapshots:
       tinyglobby: 0.2.10
     optionalDependencies:
       typescript: 5.7.2
-
-  scheduler@0.25.0: {}
 
   stackframe@1.3.4: {}
 

@@ -1,5 +1,5 @@
 import React from "react";
-import * as Icons from "./aws-react-icons";
+import * as Icons from "@nullodev/icons-aws";
 import "./App.css";
 
 const App: React.FC = () => {
