@@ -1,7 +1,6 @@
 {
   "name": "aws-icons",
-  "private": true,
-  "version": "1.0.0",
+ "version": "1.0.0",
   "scripts": {
     "build": "rsbuild build",
     "check": "biome check --write",
