@@ -1,5 +1,5 @@
 {
-  "name": "@nullodev/icons-aws",
+  "name": "icons-aws",
   "main": "./src/index.ts",
   "scripts": {
     "build": "rslib build"
